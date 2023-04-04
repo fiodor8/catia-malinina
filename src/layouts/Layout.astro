@@ -1,0 +1,37 @@
+---
+export interface Props {
+	title: string;
+}
+
+import "@fontsource/lato"
+
+import '/styles/main.css';
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Catia Malinina. Lisbon Based Photograph. Make yourself remarkable with a modern artistic headshot">
+		<meta name="keywords" content="Photograph, Headshot, Lisbon, Artistic">
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content="Lisbon Based Photograph. Make yourself remarkable with a modern artistic headshot." />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="text-zinc-900">
+		<slot/>
+
+	</body>
+</html>
+
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+</style>
