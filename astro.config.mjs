@@ -5,6 +5,5 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://fiodor8.github.io',
-  base: '/catia-website',
+  site: 'https://catia-maninina.github.io',
 });
